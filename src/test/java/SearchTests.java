@@ -9,7 +9,7 @@ public class SearchTests {
     void successfulSearchTestYahoo() {
         open("https://search.yahoo.com/");
         $("[name=p]").setValue("selenide").pressEnter();
-        $("[id=results]").shouldHave(text("selenide"));
+        $("[id=results]").shouldHave(text("road to conflict"));
     }
 
 
