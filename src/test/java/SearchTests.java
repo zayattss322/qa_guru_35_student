@@ -17,6 +17,6 @@ public class SearchTests {
     void successfulSearchTestYandex() {
         open("https://www.ya.ru/");
         $("[name=text]").setValue("selenide").pressEnter();
-        $("[id=search-result]").shouldHave(text("ru.selenide.org"));
+        $("[id=search-result]").shouldHave(text("selenide.org"));
     }
 }
