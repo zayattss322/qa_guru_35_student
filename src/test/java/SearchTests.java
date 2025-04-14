@@ -21,7 +21,7 @@ public class SearchTests {
         $("[id=search-result]").shouldHave(text("ru.selenide.org"));
         System.out.println("test done");
     }
-
+    
     @Test
     void successfulSearchTestGoogle() {
         open("https://www.google.com/");
