@@ -19,4 +19,11 @@ public class SearchTests {
         $("[name=text]").setValue("selenide").pressEnter();
         $("[id=search-result]").shouldHave(text("it was a conflict here"));
     }
+    
+    @Test
+    void successfulSearchTestGoogle() {
+        open("https://www.google.com/");
+        $("[name=text1]").setValue("selenide").pressEnter();
+        $("[id=search-results]").shouldHave(text("selenide.com"));
+    }
 }
