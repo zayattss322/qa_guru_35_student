@@ -9,7 +9,8 @@ public class SearchTests {
     void successfulSearchTestYahoo() {
         open("https://search.yahoo.com/");
         $("[name=p]").setValue("selenide").pressEnter();
-        $("[id=results]").shouldHave(text("selenide"));
+        $("[id=results]").shouldHave(text("selenide.org"));
+        System.out.println("test done");
     }
 
 
@@ -17,13 +18,15 @@ public class SearchTests {
     void successfulSearchTestYandex() {
         open("https://www.ya.ru/");
         $("[name=text]").setValue("selenide").pressEnter();
-        $("[id=search-result]").shouldHave(text("selenide"));
+        $("[id=search-result]").shouldHave(text("ru.selenide.org"));
+        System.out.println("test done");
     }
     
     @Test
     void successfulSearchTestGoogle() {
         open("https://www.google.com/");
         $("[name=text1]").setValue("selenide").pressEnter();
-        $("[id=search-results]").shouldHave(text("selenide"));
+        $("[id=search-results]").shouldHave(text("selenide.com"));
+        System.out.println("test done");
     }
 }
